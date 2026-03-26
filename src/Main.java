@@ -1,26 +1,32 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
-        carro carro1 = new carro();
-        carro carro2 = new carro();
+        ArrayList<carro> lista = new ArrayList<>();
 
-        carro1.marca = "Toyota";
-        carro1.modelo = "Corolla";
-        carro1.ano = 2020;
+        carro c1 = new carro();
+        c1.marca = "Toyota";
+        c1.modelo = "Corolla";
+        c1.ano = 2020;
 
-        carro2.marca = "Honda";
-        carro2.modelo = "Civic";
-        carro2.ano = 2018;
+        carro c2 = new carro();
+        c2.marca = "Honda";
+        c2.modelo = "Civic";
+        c2.ano = 2018;
 
+        carro c3 = new carro();
+        c3.marca = "Fiat";
+        c3.modelo = "Uno";
+        c3.ano = 2015;
 
-        System.out.println("Carro 1:");
-        carro1.exibir();
+        lista.add(c1);
+        lista.add(c2);
+        lista.add(c3);
 
-        System.out.println("\nCarro 2:");
-        carro2.exibir();
-
-        System.out.println("\nIdade do carro 1: " + carro1.idadeDoCarro());
-        System.out.println("Idade do carro 2: " + carro2.idadeDoCarro());
-
+        for (carro c : lista) {
+            c.exibir();
+            System.out.println();
+        }
     }
 }
